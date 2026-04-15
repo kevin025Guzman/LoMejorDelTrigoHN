@@ -138,3 +138,22 @@ header {
     box-shadow: 0 4px 20px rgba(0,0,0,0.03);
     margin-top: 3rem;
 }
+
+/* Feed TikTok Dinámico */
+.contenedor_tiktok {
+    width: 100%;
+    margin: 0 auto 4rem auto;
+    display: block; /* Volvemos a block para que el script de Elfsight tome todo el ancho real */
+    overflow-x: hidden; /* Prevenir que sobresalga en móviles pequeños */
+}
+
+/* Forzar que el widget interno abarque el contenedor */
+.contenedor_tiktok > div {
+    width: 100% !important;
+}
+
+@media (min-width: 768px) {
+    .contenedor_tiktok {
+        width: 100%;
+    }
+}
