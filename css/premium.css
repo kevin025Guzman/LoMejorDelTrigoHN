@@ -1,0 +1,138 @@
+/* Estilos Base - Premium UI */
+body {
+    background-color: #faf9f6; /* Crema muy limpio */
+    color: #333;
+}
+
+/* Rediseño de Navegación */
+header {
+    background-image: linear-gradient(135deg, rgba(22, 34, 42, 0.9) 0%, rgba(58, 96, 115, 0.9) 100%), url('/img/fondo_header.webp') !important; /* Placeholder: Un elegante glass oscuro si es posible, o mantenemos el naranja oscuro */
+    /* Vamos a mantener la línea del trigo */
+    background-image: linear-gradient(135deg, rgba(224, 103, 3, 0.95) 0%, rgba(255, 88, 88, 0.9) 100%) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Modificamos el Navbar para el modo Mobile First */
+.navegacion {
+    position: relative;
+}
+
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
+}
+
+.hamburger-btn span {
+    width: 2rem;
+    height: 0.25rem;
+    background: white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+/* Menú Móvil */
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: flex;
+        position: absolute;
+        top: -60px; /* Alineado a la derecha en el header */
+        right: 1rem;
+    }
+    
+    .hamburger-btn.active span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .hamburger-btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-btn.active span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    #main-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgba(224, 103, 3, 0.98);
+        height: 100vh;
+        text-align: center;
+        padding: 2rem;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        transition: right 0.3s ease-in-out;
+        z-index: 99;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        margin-top: 0;
+    }
+
+    #main-nav.active {
+        right: 0;
+    }
+
+    #main-nav a {
+        font-size: 1.5rem;
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+/* Efectos Premium tipo Card (Tarjetas) */
+.articulo1, .contenido_articulo, .caja_frase {
+    background-color: white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid rgba(0,0,0,0.02) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.articulo1:hover, .contenido_articulo:hover, .caja_frase:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+.boton {
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s !important;
+}
+
+.boton:hover {
+    box-shadow: 0 10px 15px -3px rgba(224, 103, 3, 0.4) !important;
+    background-color: #fca311 !important;
+}
+
+/* Tipografía - Hacerla mas fresca */
+.titulo-seccion h2, .titulo-articulo, .leyendo h1, .texto_visitanos h1, h1 {
+    font-weight: 800 !important;
+    letter-spacing: -0.5px;
+    color: #14213d;
+}
+
+.parrafo-articulo, .mision, .vision, .texto_credo, .texto-slogan p {
+    color: #4a4a4a;
+    font-weight: 400;
+}
+
+.texto-slogan p, .texto-slogan h1 {
+    color: white !important; /* Header text */
+}
+
+/* Espaciados Profesionales */
+.mision, .vision {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    margin-top: 3rem;
+}
