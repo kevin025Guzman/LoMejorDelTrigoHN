@@ -1,0 +1,15 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/ministerio", "destination": "/pages/ministerio" },
+    { "source": "/recursos", "destination": "/pages/recursos" },
+    { "source": "/articulos", "destination": "/pages/articulos" },
+    { "source": "/frases", "destination": "/pages/frases" },
+    { "source": "/solaEscritura", "destination": "/pages/solaEscritura" },
+    { "source": "/solaFe", "destination": "/pages/solaFe" },
+    { "source": "/solaGracia", "destination": "/pages/solaGracia" },
+    { "source": "/soloADiosLaGloria", "destination": "/pages/soloADiosLaGloria" },
+    { "source": "/soloCristo", "destination": "/pages/soloCristo" }
+  ]
+}
