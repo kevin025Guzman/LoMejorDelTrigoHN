@@ -14,15 +14,15 @@ header {
 }
 
 /* Modificamos el Navbar para el modo Mobile First */
-.navegacion {
-    position: relative;
+.contenido-barra-navegacion {
+    position: relative; /* Base para anclar la hamburguesa a la cabecera real */
 }
 
 .hamburger-btn {
     display: none;
     flex-direction: column;
     justify-content: space-around;
-    width: 2rem;
+    width: 2.2rem;
     height: 2rem;
     background: transparent;
     border: none;
@@ -32,7 +32,7 @@ header {
 }
 
 .hamburger-btn span {
-    width: 2rem;
+    width: 2.2rem;
     height: 0.25rem;
     background: white;
     border-radius: 10px;
@@ -46,8 +46,8 @@ header {
     .hamburger-btn {
         display: flex;
         position: absolute;
-        top: -60px; /* Alineado a la derecha en el header */
-        right: 1rem;
+        top: 2rem; /* Esquina superior respecto a header total */
+        right: 1.5rem; /* Esquina derecha */
     }
     
     .hamburger-btn.active span:nth-child(1) {
